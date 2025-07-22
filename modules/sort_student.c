@@ -3,6 +3,27 @@
 
 void sortStudents(int ascending) {
     // 1️⃣  If studentCount < 2, no need to sort, just return.
+    if (studentCount < 2) return;
+
+
+    Student temp;
+
+    for (int i = 0; i < studentCount - 1; i++) {
+        for (int j = 0; j < studentCount - i - 1; j++) {
+            int condition = ascending
+                ? (students[j].marks < students[j + 1].marks)
+                : (students[j].marks > students[j + 1].marks);
+
+            if (condition) {
+                temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Students sorted in %s order.\n", ascending ? "ascending" : "descending");
+
 
     // 2️⃣  Use Bubble Sort:
     //     - Outer loop from 0 to studentCount-2
