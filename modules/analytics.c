@@ -1,13 +1,21 @@
+// analytics.c
 #include <stdio.h>
 #include "../student.h"
 
 void calculateAverage() {
-    // 1️⃣  If studentCount == 0:
-    //       print "No students to calculate average." and return.
+    if (studentCount == 0) {
+        printf("⚠️  No students to calculate average.\n");
+        return;
+    }
 
-    // 2️⃣  Loop through students, sum all marks.
+    float totalMarks = 0.0;
 
-    // 3️⃣  Divide sum by studentCount
+    for (int i = 0; i < studentCount; i++) {
+        totalMarks += students[i].marks;
+    }
 
-    // 4️⃣  Print "Average marks: X.XX"
+    float average = totalMarks / studentCount;
+
+    printf("✅ Average marks of %d student%s: %.2f\n", 
+           studentCount, studentCount == 1 ? "" : "s", average);
 }
