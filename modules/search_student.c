@@ -1,13 +1,18 @@
-#include <stdio.h>
 #include "../student.h"
 
 void searchStudent() {
-    // 1️⃣  Ask for a roll number (scanf)
+    int rollNo;
+    printf("Enter roll number to search: ");
+    scanf("%d", &rollNo);
 
-    // 2️⃣  Call findStudentIndex(rollNo) to get index
+    int index = findStudentIndex(rollNo);
 
-    // 3️⃣  If index == -1:
-    //       print "Student not found."
-    //     Else:
-    //       print the student's name, roll number, and marks
+    if (index == -1) {
+        printf("Student not found.\n");
+    } else {
+        printf("Student found:\n");
+        printf("Name: %s\n", students[index].name);
+        printf("Roll No: %d\n", students[index].rollNo);
+        printf("Marks: %.2f\n", students[index].marks);
+    }
 }
