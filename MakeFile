@@ -10,3 +10,12 @@ $(OUT): $(SRC)
 
 clean:
 	rm -f $(OUT)
+
+# Common helpers
+GLOBAL = tests/globals.c
+
+# Targets
+.PHONY: test_add
+test_add: tests/test_add.c modules/add_student.c $(GLOBAL)
+	$(CC) $(CFLAGS) tests/test_add.c modules/add_student.c $(GLOBAL) -o test_add
+	./test_add

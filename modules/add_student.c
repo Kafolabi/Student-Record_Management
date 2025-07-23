@@ -4,7 +4,6 @@
 
 void addStudent() {
     // 1️⃣  Check if studentCount >= MAX_STUDENTS
-    //     - If yes, print "List is full!" and return.
     if(studentCount >= MAX_STUDENTS){
         printf("List is full!\n");
         return;
@@ -58,7 +57,6 @@ void addStudent() {
         clearBuffer();
         return;
     }
-
 
     // 6️⃣  Add the student to the global array:
     //     students[studentCount++] = s;
