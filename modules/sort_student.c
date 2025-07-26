@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include "../student.h"
 
+
+void printStudents() {
+    for (int i = 0; i < studentCount; i++) {
+        printf("%s %d %.2f\n", students[i].name, students[i].rollNo, students[i].marks);
+    }
+}
+
 void sortStudents(int ascending) {
     // 1️⃣  If studentCount < 2, no need to sort, just return.
     if (studentCount < 2) return;
@@ -23,6 +30,7 @@ void sortStudents(int ascending) {
     }
 
     printf("Students sorted in %s order.\n", ascending ? "ascending" : "descending");
+    printStudents();
 
 
     // 2️⃣  Use Bubble Sort:

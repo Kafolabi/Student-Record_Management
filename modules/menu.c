@@ -3,14 +3,14 @@
 
 // external function declarations
 
-// void addStudent();
-// void viewAllStudents();
-// void searchStudent();
-// void modifyStudent();
-// void deleteStudent();
-// void calculateAverage();
-// void sortStudents(int ascending);
-// void saveToFile();
+void addStudent();
+void viewAllStudents();
+void searchStudent();
+void modifyStudent();
+void deleteStudent();
+void calculateAverage();
+void sortStudents(int ascending);
+void saveToFile();
 
 void menu() {
 

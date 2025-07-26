@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall
-SRC = main.c modules/add_student.c modules/view_students.c modules/search_student.c modules/modify_student.c modules/delete_student.c modules/analytics.c modules/sort_students.c modules/file_handling.c modules/menu.c
+SRC = main.c modules/add_student.c modules/view_student.c modules/search_student.c modules/modify_student.c modules/delete_student.c modules/analytics.c modules/sort_student.c modules/file_handling.c modules/menu.c
 OUT = student_system
 
 all: $(OUT)

@@ -1,4 +1,5 @@
 #include "../student.h"
+#include <stdio.h>
 
 void searchStudent() {
     int rollNo;

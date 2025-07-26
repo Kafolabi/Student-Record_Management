@@ -3,3 +3,7 @@ test_add
 test_delete
 test_modify
 test_sort
+
+
+student_system
+main
