@@ -6,12 +6,13 @@
 
 #define FILE_NAME "students.txt"
 
-extern Student *students;     // Dynamic array of students
-extern int studentCount;      // Current number of students
+// ✅ Match student.h: fixed-size array, not a pointer
+extern Student students[MAX_STUDENTS];
+extern int studentCount;
 
 void saveToFile() {
     FILE *fp = fopen(FILE_NAME, "w");
-    if (fp == NULL) {
+    if (!fp) {
         perror("❌ Failed to open file for writing");
         return;
     }
@@ -33,12 +34,11 @@ void saveToFile() {
 
 void loadFromFile() {
     FILE *fp = fopen(FILE_NAME, "r");
-    if (fp == NULL) {
-        if (errno == ENOENT) {
-            printf("ℹ️  No existing file found. Starting fresh.\n");
-        } else {
+    if (!fp) {
+        if (errno == ENOENT)
+            printf("ℹ️ No existing file found. Starting fresh.\n");
+        else
             perror("❌ Error opening file for reading");
-        }
         return;
     }
 
@@ -49,29 +49,20 @@ void loadFromFile() {
         return;
     }
 
-    // ✅ Allocate memory based on metadata
-    students = malloc(sizeof(Student) * count);
-    if (students == NULL) {
-        perror("❌ Memory allocation failed");
-        fclose(fp);
-        return;
-    }
+    studentCount = 0;  // reset before loading
 
     char line[200];
-    studentCount = 0;
-
-    while (fgets(line, sizeof(line), fp) && studentCount < count) {
-        char *token;
-        token = strtok(line, "|");
-        if (token == NULL) continue;
+    while (fgets(line, sizeof(line), fp) && studentCount < count && studentCount < MAX_STUDENTS) {
+        char *token = strtok(line, "|");
+        if (!token) continue;
         strcpy(students[studentCount].name, token);
 
         token = strtok(NULL, "|");
-        if (token == NULL) continue;
+        if (!token) continue;
         students[studentCount].rollNo = atoi(token);
 
         token = strtok(NULL, "|");
-        if (token == NULL) continue;
+        if (!token) continue;
         students[studentCount].marks = atof(token);
 
         studentCount++;
@@ -81,7 +72,7 @@ void loadFromFile() {
     printf("✅ Loaded %d student(s) from '%s'.\n", studentCount, FILE_NAME);
 }
 
-// 💡 Optional utility to check for unique roll numbers
+// ✅ Optional utility
 int isRollNoUnique(int rollNo) {
     for (int i = 0; i < studentCount; i++) {
         if (students[i].rollNo == rollNo) {

@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include "../student.h"
 
-Student students[MAX_STUDENTS] = {
-    {"Alice", 1, 90},
-    {"Bob", 2, 80}
-};
-int studentCount = 2;
+Student *students = NULL;
+int studentCount = 0;
 
 void saveToFile();
 void loadFromFile();

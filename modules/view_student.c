@@ -11,7 +11,7 @@ void viewAllStudents() {
     }
     printf("List of Students:\n");
     for (int i = 0; i < studentCount; i++) {
-        printf("Name: %s | Roll No: %d | Marks: %d\n",
+        printf("Name: %s | Roll No: %d | Marks: %.2f\n",
                students[i].name,
                students[i].rollNo,
                students[i].marks);

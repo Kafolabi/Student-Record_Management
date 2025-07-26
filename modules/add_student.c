@@ -57,6 +57,8 @@ void addStudent() {
         clearBuffer();
         return;
     }
+    
+    clearBuffer();
 
     // 6️⃣  Add the student to the global array:
     //     students[studentCount++] = s;

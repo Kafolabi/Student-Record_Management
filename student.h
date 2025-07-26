@@ -23,7 +23,9 @@ typedef struct {
 } Student;
 
 // global variables (defined in main.c)
-extern Student students[MAX_STUDENTS];
+// extern Student students[MAX_STUDENTS];
+
+extern Student students[MAX_STUDENTS]; 
 extern int studentCount;
 
 // utility functions
