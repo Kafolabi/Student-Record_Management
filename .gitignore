@@ -3,7 +3,15 @@ test_add
 test_delete
 test_modify
 test_sort
-
+test_search
+test_display
+test_update
+test
+test_analytics
+test_file
+test_search
+test_view
 
 student_system
+student-management
 main
