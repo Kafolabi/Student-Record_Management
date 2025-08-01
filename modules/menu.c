@@ -21,6 +21,11 @@ void menu() {
     // 2️⃣  Print menu options:
     //       1.Add 2.View 3.Search 4.Modify 5.Delete 6.Average 7.Sort 8.Save 9.Exit
 
+    // Control flow
+    // Conditional statements: if/else, switch/case
+    // Loops(iteratives): for, while, do-while
+
+
     do {
         printf("\n=== Student Management System Menu ===\n");
         printf("1. Add Student\n");
