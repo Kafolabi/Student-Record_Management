@@ -8,13 +8,11 @@ A simple application for managing student records, including adding, updating, v
 - Update existing student details
 - View all student records
 - Delete student records
-
-## Technologies Used
-
-- Python (or specify your language)
-- SQLite/MySQL/PostgreSQL (or specify your database)
-- Flask/Django (if applicable)
-- HTML/CSS/JavaScript (if applicable)
+- Get the average of students scores
+- Save and load student records from txt.file
+- Modify student records
+- Search for students by roll number
+- Sort students in ascending and descending order
 
 ## 👥 Team Assignments
 
@@ -32,10 +30,40 @@ Each teammate implements **2 modules** and tests them with provided harnesses.
 
 ## 🛠 How Each Team Member Works
 
-1. **Open your assigned module(s) inside `modules/`.**
-2. Follow the **numbered pseudocode comments** inside each file.
-3. Use your **test harness in `tests/`** to test only your module.
-4. Once it works, send ONLY your `.c` files from `modules/` back to the team lead.
+Each team member should work on their assigned modules in a separate Git branch. This helps keep the main branch stable and makes collaboration easier.
+
+### Steps for Each Member
+
+1. **Pull the latest changes:**
+    ```bash
+    git checkout main
+    git pull origin main
+    ```
+
+2. **Create a new branch for your modules:**
+    ```bash
+    git checkout -b <your-branch-name>
+    ```
+    Example:
+    ```bash
+    git checkout -b add-student-feature
+    ```
+
+3. **Work on your assigned files and commit changes:**
+    ```bash
+    git add modules/<your_module>.c tests/<your_test>.c
+    git commit -m "Implement <feature> and add tests"
+    ```
+
+4. **Push your branch to the remote repository:**
+    ```bash
+    git push origin <your-branch-name>
+    ```
+
+5. **Open a Pull Request** to merge your branch into `main` after your code is reviewed and tested.
+
+> **Tip:** Repeat these steps for each module you are assigned. Always keep your branch up to date with `main` by pulling regularly.
+
 
 ---
 
