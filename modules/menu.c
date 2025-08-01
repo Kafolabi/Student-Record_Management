@@ -25,7 +25,6 @@ void menu() {
     // Conditional statements: if/else, switch/case
     // Loops(iteratives): for, while, do-while
 
-
     do {
         printf("\n=== Student Management System Menu ===\n");
         printf("1. Add Student\n");

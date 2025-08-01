@@ -23,9 +23,8 @@ void deleteStudent() {
     for (int i = idx; i < studentCount - 1; i++) {
         students[i] = students[i + 1];
     }
-    //         for (i = idx; i < studentCount - 1; i++) students[i] = students[i + 1];
-    //       - Decrease studentCount--
     studentCount--;
     //       - Print "Student deleted successfully!"
+    
     printf("Student deleted successfully!\n");
 }

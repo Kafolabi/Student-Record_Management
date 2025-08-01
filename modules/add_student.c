@@ -4,11 +4,11 @@
 
 void addStudent() {
     // 1️⃣  Check if studentCount >= MAX_STUDENTS
+    
     if(studentCount >= MAX_STUDENTS){
         printf("List is full!\n");
         return;
     }
-
 
     // 2️⃣  Create a temporary Student variable (e.g. Student s;)
 

@@ -67,7 +67,6 @@ void loadFromFile() {
 
         studentCount++;
     }
-
     fclose(fp);
     printf("✅ Loaded %d student(s) from '%s'.\n", studentCount, FILE_NAME);
 }

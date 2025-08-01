@@ -23,6 +23,5 @@ int main() {
     for (int i = 0; i < studentCount; i++) {
         printf("%s %d %.2f\n", students[i].name, students[i].rollNo, students[i].marks);
     }
-
     return 0;
 }

@@ -1,7 +1,6 @@
 #include "../student.h"
 #include <stdio.h>
 
-// Pseudocode:
 // 1. Loop through all students
 // 2. Print each student's details
 
